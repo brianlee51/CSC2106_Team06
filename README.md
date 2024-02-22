@@ -49,9 +49,16 @@ However, it is good to note that members could help out in the project outside o
 
   <h4>Stage 2</h4>
   Subsequently, the complexity of the project is enhanced, based on this software architecture diagram:
-  ![image](https://github.com/brianlee51/CSC2106_Team06/assets/41094581/e8bbb1f1-98de-463f-b0ea-612fff83471f)
+  
+  ![Screenshot 2024-02-22 185459](https://github.com/brianlee51/CSC2106_Team06/assets/41094581/ef7473ca-f8d0-4eeb-a1ba-c476e8a60736)
 
-  To better understand the diagram, the updated project plan includes the use of M5Stick at the factory and Raspberry Pi Pico as a temperature monitor and data storage for the truck. 
+  To better understand the diagram, the updated project plan now includes the use of M5Stick at the factory and Raspberry Pi Pico in the truck as a temperature monitor and data storage for the truck.<br>
+  The distribution centres acts as an offline LORA-mesh node, where the temperature data is uploaded back to the truck.<br>
+  Once the truck reaches back at the factory, all the data collected would then be uploaded to the cloud via the use of internet.<br>
+
+  However, this plan also did not come into fruition due to the following factors:<br>
+  - This way of doing doesn't factor in after the distribution center.
+  - Real time monitoring of data is impossible to track without the use of internet.
 </details>
 
 # <h3>References</h3>
