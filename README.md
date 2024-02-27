@@ -24,6 +24,9 @@ The following is the list of equipment used to develop the project:
 This project is developed using Arduino (C++) and the steps to run the project is as follows:
 - IF ANY, TBC
 
+# <h3>Assumptions</h3>
+- Customers informed of the correct temperature for the storage of the products.
+
 # <h3>Flow explanation and justification</h3>
 - The factory itself is a LoRa-MESH network, consisting 2 Lilygo ESP32s and 1 mobile phone.
    - 1 Lilygo ESP32 (Lora/WiFi) to facilitate the receival of information from the other Lilygo (LoRa), and to upload the data received to the cloud (WiFi)
@@ -38,7 +41,10 @@ This project is developed using Arduino (C++) and the steps to run the project i
 - When delivery can be done, the delivery man will carry the company's mobile device to deliver the products to the distributor's freezer.
    - This mobile device will act as a middle man, connecting the truck's Lilygo ESP32 and the distributor's freezer. <br>
      <b>Justification:</b> Considering the truck will be parked at the loading/unloading bay, the range between the truck and the freezer may be too far apart for a bluetooth connection. Furthermore, there was a need to justify why one should enable the bluetooth function on their personal mobile device to aid with this connection. Hence, having the delivery man carry a company mobile device would solve the issue.
-- Once at the distributor's freezer, all the temperature data collected from the last completed delivery would be 
+- Once at the distributor's freezer, all the temperature data collected from the last completed delivery would first be uploaded to the company mobile device, then at close proximity to the truck transfer the data back to the truck's Lilygo<br>
+   - The distribution centers form a bluetooth mesh.
+   - All data transfer and passing will be done through Bluetooth. <br>
+  <b>Justification:</b> The reason for collecting all the temperature data collected from the last completed delivery is so to protect the factory. If the customer had chosen to request for refund multiple times, past records of the customer's freezer temperature data would be useful to determine if the fault lies with the customer's faulty freezer or the temperature being set wrongly.
 
 # <h3>System Architectural Diagram</h3>
 ![image](https://github.com/brianlee51/CSC2106_Team06/assets/41094581/8f1cb887-e451-448c-b565-0e3e5fc9dce3)
