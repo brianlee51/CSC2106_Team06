@@ -17,7 +17,6 @@ This brings the point of our overall project, which aims to reduce the chances o
 # <h3>Equipment Used</h3>
 The following is the list of equipment used to develop the project:
 - 3x Lilygo ESP32
-- 1x Mobile Phone (Delivery Man to distributor's factory)
 - 1x Mobile Phone (Based in factory, acting as wifi-hotspot)
 
 # <h3>Programming Language Used</h3>
@@ -28,10 +27,30 @@ This project is developed using Arduino (C++) and the steps to run the project i
 - Customers informed of the correct temperature for the storage of the products.
 
 # <h3>Flow explanation and justification</h3>
+   - The factory itself is a LoRa-MESH network, and the entire network currently consists of 3 Lilygo ESP32s and 1 mobile phone.
+       - 1 Lilygo ESP32 is based inside the truck.
+       - 1 Lilygo ESP32 is carried by the delivery man.
+       - 1 Lilygo ESP32 acts as a central lora gateway.
+       - 1 Mobile Phone for the purpose of acting as a WiFi hotspot.
+   -  At this stage, nothing significant is happening as of yet. Delivery man will carry 1 Lilygo ESP32 when fulfilling his delivery schedule.
+   - Once the truck is at a distributor parking lot:
+     - Temperature from the truck is recorded and stored inside of the truck's Lilygo ESP32.
+     - If abnormalities are detected with the temperature once the truck reaches the distributor, the goods will not be unloaded, but rather, displayed as delivery failed and the truck would be recalled back to the factory.
+     - Otherwise, the delivery can proceed as per normal. <br>
+       <b>Justification:</b> This is done to protect the factory, such that if there are abnormalities, it would ensure retifications are made. At the same time, the distributor cannot blame the factory for cases of food spoilage, as the temperature data are being tracked consistently, providing evidence to support the factory in the case of a dispute.
 
+   - When delivery can be done, the delivery man will take his assigned Lilygo ESP32 and disembark from the truck to proceed to the distributor's freezer to carry out his delivery.
+   - His Lilygo ESP32 will act as a middle man, connecting the truck's Lilygo ESP32 and the distributor's freezer.<br>
+   - When the freezer's lilygo ESP32 and the delivery man's ESP32 is in range, they will then transmit data from the freezer to the delivery man's ESP32 through a WiFi Mesh.
+   - When the driver go back to the truck, the esp32 the driver holding will transmit data to the esp32 in the truck (WiFi mesh)
+   - This process repeats multiple times, with the delivery man's ability to go to multiple distributor center to complete his delivery.
+     <b>Justification:</b> The enables efficient real-time communication and data transmission between the delivery man, distributor's freezer, and truck, ensuring seamless coordination and optimized logistical operations.
+
+   - Back at the factory, both the delivery man and the truck's ESP32 will transmit to a central lora gateway (lora p2p).
+   - From the lora gateway, the data received will be uploaded to a http api endpoint (WiFi hotspot).
 
 # <h3>System Architectural Diagram</h3>
-![image](https://github.com/brianlee51/CSC2106_Team06/assets/41094581/f2c895c6-5918-4d7b-a1d4-73f8617c46d4)
+![image](https://github.com/brianlee51/CSC2106_Team06/assets/41094581/2b5ec0fa-60b5-4381-b92c-bbccfc42e8e0)
 
 # <h3>Workload Distribution</h3>
 The following is the initial workload plan given to each of the respective members of the group. 
