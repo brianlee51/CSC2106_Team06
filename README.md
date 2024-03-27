@@ -28,26 +28,10 @@ This project is developed using Arduino (C++) and the steps to run the project i
 - Customers informed of the correct temperature for the storage of the products.
 
 # <h3>Flow explanation and justification</h3>
-- The factory itself is a LoRa-MESH network, consisting 2 Lilygo ESP32s and 1 mobile phone.
-   - 1 Lilygo ESP32 (Lora/WiFi) to facilitate the receival of information from the other Lilygo (LoRa), and to upload the data received to the cloud (WiFi)
-   - 1 Lilygo ESP32 (Lora/Bluetooth) to facilitate the receival of information from the truck (Bluetooth), and passing the information to the other Lilygo (LoRa)
-   - Mobile phone is acting as a WiFi Hotspot connection.
- - When the truck leaves the factory, there will not be any internet connection involved. The passing of information is through the usage of Bluetooth.
- - Once the truck is at a distributor parking lot:
-   - Temperature from the truck is recorded and stored inside of the truck's Lilygo ESP32.
-   - If abnormalities are detected with the temperature once the truck reaches the distributor, the goods will not be unloaded, but rather, displayed as delivery failed and the truck would be recalled back to the factory.
-   - Otherwise, the delivery can proceed as per normal. <br>
-     <b>Justification:</b> This is done to protect the factory, such that if there are abnormalities, it would ensure retifications are made. At the same time, the distributor cannot blame the factory for cases of food spoilage, as the temperature data are being tracked consistently, providing evidence to support the factory in the case of a dispute.
-- When delivery can be done, the delivery man will carry the company's mobile device to deliver the products to the distributor's freezer.
-   - This mobile device will act as a middle man, connecting the truck's Lilygo ESP32 and the distributor's freezer. <br>
-     <b>Justification:</b> Considering the truck will be parked at the loading/unloading bay, the range between the truck and the freezer may be too far apart for a bluetooth connection. Furthermore, there was a need to justify why one should enable the bluetooth function on their personal mobile device to aid with this connection. Hence, having the delivery man carry a company mobile device would solve the issue.
-- Once at the distributor's freezer, all the temperature data collected from the last completed delivery would first be uploaded to the company mobile device, then at close proximity to the truck transfer the data back to the truck's Lilygo<br>
-   - The distribution centers form a bluetooth mesh.
-   - All data transfer and passing will be done through Bluetooth. <br>
-  <b>Justification:</b> The reason for collecting all the temperature data collected from the last completed delivery is so to protect the factory. If the customer had chosen to request for refund multiple times, past records of the customer's freezer temperature data would be useful to determine if the fault lies with the customer's faulty freezer or the temperature being set wrongly.
+
 
 # <h3>System Architectural Diagram</h3>
-![image](https://github.com/brianlee51/CSC2106_Team06/assets/41094581/8f1cb887-e451-448c-b565-0e3e5fc9dce3)
+![image](https://github.com/brianlee51/CSC2106_Team06/assets/41094581/f2c895c6-5918-4d7b-a1d4-73f8617c46d4)
 
 # <h3>Workload Distribution</h3>
 The following is the initial workload plan given to each of the respective members of the group. 
@@ -81,6 +65,31 @@ However, it is good to note that members could help out in the project outside o
   However, this plan also did not come into fruition due to the following factors:<br>
   - This way of doing doesn't factor in after the distribution center.
   - Real time monitoring of data is impossible to track without the use of internet.
+
+   <h4>Stage 3</h4>
+   ![image](https://github.com/brianlee51/CSC2106_Team06/assets/41094581/8f1cb887-e451-448c-b565-0e3e5fc9dce3)
+
+   As a recap, the finalised at this stage used to be:
+
+   - The factory itself is a LoRa-MESH network, consisting 2 Lilygo ESP32s and 1 mobile phone.
+   - 1 Lilygo ESP32 (Lora/WiFi) to facilitate the receival of information from the other Lilygo (LoRa), and to upload the data received to the cloud (WiFi)
+   - 1 Lilygo ESP32 (Lora/Bluetooth) to facilitate the receival of information from the truck (Bluetooth), and passing the information to the other Lilygo (LoRa)
+   - Mobile phone is acting as a WiFi Hotspot connection.
+ - When the truck leaves the factory, there will not be any internet connection involved. The passing of information is through the usage of Bluetooth.
+ - Once the truck is at a distributor parking lot:
+   - Temperature from the truck is recorded and stored inside of the truck's Lilygo ESP32.
+   - If abnormalities are detected with the temperature once the truck reaches the distributor, the goods will not be unloaded, but rather, displayed as delivery failed and the truck would be recalled back to the factory.
+   - Otherwise, the delivery can proceed as per normal. <br>
+     <b>Justification:</b> This is done to protect the factory, such that if there are abnormalities, it would ensure retifications are made. At the same time, the distributor cannot blame the factory for cases of food spoilage, as the temperature data are being tracked consistently, providing evidence to support the factory in the case of a dispute.
+- When delivery can be done, the delivery man will carry the company's mobile device to deliver the products to the distributor's freezer.
+   - This mobile device will act as a middle man, connecting the truck's Lilygo ESP32 and the distributor's freezer. <br>
+     <b>Justification:</b> Considering the truck will be parked at the loading/unloading bay, the range between the truck and the freezer may be too far apart for a bluetooth connection. Furthermore, there was a need to justify why one should enable the bluetooth function on their personal mobile device to aid with this connection. Hence, having the delivery man carry a company mobile device would solve the issue.
+- Once at the distributor's freezer, all the temperature data collected from the last completed delivery would first be uploaded to the company mobile device, then at close proximity to the truck transfer the data back to the truck's Lilygo<br>
+   - The distribution centers form a bluetooth mesh.
+   - All data transfer and passing will be done through Bluetooth. <br>
+  <b>Justification:</b> The reason for collecting all the temperature data collected from the last completed delivery is so to protect the factory. If the customer had chosen to request for refund multiple times, past records of the customer's freezer temperature data would be useful to determine if the fault lies with the customer's faulty freezer or the temperature being set wrongly.
+
+   However, 
 </details>
 
 # <h3>References</h3>
