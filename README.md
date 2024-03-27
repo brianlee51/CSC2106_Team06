@@ -67,7 +67,7 @@ However, it is good to note that members could help out in the project outside o
   - Real time monitoring of data is impossible to track without the use of internet.
 
    <h4>Stage 3</h4>
-   ![image](https://github.com/brianlee51/CSC2106_Team06/assets/41094581/8f1cb887-e451-448c-b565-0e3e5fc9dce3)
+  ![image](https://github.com/brianlee51/CSC2106_Team06/assets/41094581/681501f0-6a99-4751-8faa-f4d52b40c35f)
 
    As a recap, the finalised at this stage used to be:
 
