@@ -109,7 +109,9 @@ However, it is good to note that members could help out in the project outside o
    - All data transfer and passing will be done through Bluetooth. <br>
   <b>Justification:</b> The reason for collecting all the temperature data collected from the last completed delivery is so to protect the factory. If the customer had chosen to request for refund multiple times, past records of the customer's freezer temperature data would be useful to determine if the fault lies with the customer's faulty freezer or the temperature being set wrongly.
 
-   However, 
+However, this idea was eventually dropped from the scope, after significant coding and testing of the product. This was due to the fact that:
+
+   - Lora Mesh was not supported in the hardware that we intend to use, in this case, it was the Lilygo ESP32.
 </details>
 
 # <h3>References</h3>
