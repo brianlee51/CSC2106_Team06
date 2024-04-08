@@ -24,6 +24,9 @@ This project is developed using Arduino (C++)
 
 # <h3>Assumptions</h3>
 - Customers informed of the correct temperature for the storage of the products.
+- WiFi Access Point (AP) at factory is always on.
+- There will be less than 16 sensor nodes at the customer's compound (see report for further details)
+- There will be less than 255 sensor nodes at the factory compound (see report for further details)
 
 # <h3>Flow explanation and justification</h3>
    - The factory itself is a LoRa-MESH network, and the entire network currently consists of 3 Lilygo ESP32s and 1 mobile phone.
