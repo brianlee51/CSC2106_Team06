@@ -50,7 +50,8 @@ This project is developed using Arduino (C++)
        <b>Justification:</b> All these processes are done to protect the manufacturer, such that if the distributor decides to exchange goods due to food spoilage, the manufacturer has some temperature data to track what may be the cause of the issue. As the temperature data are being tracked consistently, evidence can be provided to support the factory in the case of a dispute.
 
 # <h3>System Architectural Diagram</h3>
-![photo_2024-03-31_15-07-31](https://github.com/brianlee51/CSC2106_Team06/assets/14316492/2b6f14b3-bec3-4063-92dd-87515eaa26c4)
+![image](https://github.com/brianlee51/CSC2106_Team06/assets/115568954/df998095-48c9-400d-bd2e-b32f2bf0f709)
+
 
 
 # <h3>Workload Distribution</h3>
