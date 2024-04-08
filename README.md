@@ -20,8 +20,7 @@ The following is the list of equipment used to develop the project:
 - 1x Mobile Phone (Based in factory, acting as wifi-hotspot)
 
 # <h3>Programming Language Used</h3>
-This project is developed using Arduino (C++) and the steps to run the project is as follows:
-- IF ANY, TBC
+This project is developed using Arduino (C++)
 
 # <h3>Assumptions</h3>
 - Customers informed of the correct temperature for the storage of the products.
