@@ -42,7 +42,7 @@ This project is developed using Arduino (C++)
    - When the freezer's lilygo ESP32 and the delivery man's ESP32 is in range, they will then transmit data from the freezer to the delivery man's ESP32 through a WiFi Mesh.
    - When the driver goes back to the truck, the driver's ESP32 will transmit data to the esp32 in the truck (WiFi mesh)
    - This process repeats multiple times, with the delivery man's ability to go to multiple distributor center to complete his delivery. The driver and truck's ESP32 will build up the sensor data based on the multiple locations the driver has been to.
-     <b>Justification:</b> This enables seamless data communication between the delivery man, distributor's freezer, and truck.
+   - <b>Justification:</b> This enables seamless data communication between the delivery man, distributor's freezer, and truck.
 
    - Back at the factory, both the delivery man and the truck's ESP32 will transmit to a central lora gateway bridge (LoRa Mesh).
    - From the lora gateway, the data received will be uploaded to a HTTPS API endpoint (WiFi P2P).
